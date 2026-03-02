@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá&cia – Contacto</title>
+</head>
+
+<body>
+    <header>
+        <img src="Imagens/logo.png" alt="Logótipo Chá&cia" width="320">
+        <nav>
+            <ul>
+                <li><a href="1-homepage.html">Início</a></li>
+                <li><a href="3-sobre.html">Sobre</a></li>
+                <li><a href="2-servico.html">Serviços</a></li>
+                <li><a href="4-contacto.html">Contacto</a></li>
+                <li><a href="5-tipos-cha.html">Tipos de Chá</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Entre em contacto connosco</h2>
+        <p>Estamos sempre disponíveis para esclarecer dúvidas, receber sugestões ou ajudar na escolha do chá ideal.
+            Preencha o formulário abaixo e responderemos o mais rápido possível.</p>
+
+        <form id="form1">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea name="mensagem" id="mensagem" rows="5" required></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <aside>
+            <h3>Dica</h3>
+            <p>Para um atendimento mais rápido, indique o tipo de chá ou serviço que procura.</p>
+        </aside>
+
+        <section>
+            <h2>Informações de Contacto</h2>
+            <p>Telefone: <a href="tel:+351913252078">+351 913 252 078</a></p>
+            <p>Email: <a href="mailto:alexandre.s.allves@gmail.com">alexandre.s.allves@gmail.com</a></p>
+            <p>Horário: Segunda a Sexta — 09h às 18h</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Chá&cia. Todos os direitos reservados</p>
+        <p>Contacto: <a href="tel:+351913252078">+351 913 252 078</a></p>
+        <p>E-mail:<a href="mailto:alexandre.s.allves@gmail.com">alexandre.s.allves@gmail.com</a></p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("form1");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            console.log("Nome: " + nome);
+            console.log("Email: " + email);
+            console.log("Mensagem: " + mensagem);
+
+            alert("Obrigado pelo seu contacto, " + nome + "!");
+        });
+    </script>
+</body>
+
+</html>
