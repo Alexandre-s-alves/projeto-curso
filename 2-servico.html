@@ -12,14 +12,23 @@
 <body>
 
     <header>
-        <img src="Imagens/logo.png" alt="Logótipo Chá&cia"  width="320">
+        <img src="Imagens/logo.png" alt="Logótipo Chá&cia" width="320">
         <nav>
             <ul>
                 <li><a href="1-homepage.html">Início</a></li>
                 <li><a href="3-sobre.html">Sobre</a></li>
-                <li><a href="2-servico.html" class="ativo">Serviços</a></li>
+                <li>
+                    <a href="6-galeria.html">Galeria</a>
+                    <ul class="submenu">
+                        <li><a href="6-galeria.html#imagens">Imagens</a></li>
+                        <li><a href="6-galeria.html#videos">Vídeos</a></li>
+                        <li><a href="6-galeria.html#momentos">Momentos Especiais</a></li>
+                    </ul>
+                </li>
+                <li><a href="2-servico.html">Serviços</a></li>
                 <li><a href="4-contacto.html">Contacto</a></li>
                 <li><a href="5-tipos-cha.html">Tipos de Chá</a></li>
+
             </ul>
         </nav>
     </header>
@@ -36,9 +45,24 @@
         </section>
 
         <section>
+            <h2>Passos do Nosso Serviço de Consultoria</h2>
+            <ol>
+                <li>Escolha do tipo de consultoria desejada</li>
+                <li>Análise do perfil de sabor do cliente</li>
+                <li>Seleção dos chás mais adequados</li>
+                <li>Degustação guiada</li>
+                <li>Entrega de recomendações personalizadas</li>
+            </ol>
+        </section>
+
+
+        <section>
+
             <h2>Catálogo de Chás</h2>
 
             <table>
+                <caption>Catálogo de Chás – Tabela de comparação</caption>
+
                 <thead>
                     <tr>
                         <th>Tipo do Chá</th>
@@ -223,15 +247,18 @@
         </section>
 
         <section>
-            <article>
-                <h2>Imagens e vídeo do Serviço</h2>
-                <p>A seguir, algumas imagens e um vídeo sugestivo de como preparar o seu chá.</p>
-                <div>
-                    <img src="Imagens/cha01.jfif" alt="Chá em chávena sobre mesa">
-                    <img src="Imagens/cha02.jfif" alt="Folhas de chá e utensílios de preparação">
+            <h2>Imagens e vídeo do Serviço</h2>
+            <p>A seguir, algumas imagens e um vídeo sugestivo de como preparar o seu chá.</p>
+            <article class="secstyle">
+
+                <div class="slider">
+                    <img src="Imagens/cha04.avif" alt="Chá em chávena sobre mesa" class="slide">
+                    <img src="Imagens/cha03.jpg" alt="Folhas de chá e utensílios de preparação" class="slide">
                 </div>
-                <div>
-                    <p>A seguir um vídeo sugestivo de como preparar o seu chá:</p>
+            </article>
+            <article class="secstyle">
+                <div class="">
+
                     <video controls src="Videos/Traditional Chinese tea-processing techniques_ Making tea  泡茶流程.mp4">
                         O seu navegador não suporta o elemento de vídeo.
                     </video>

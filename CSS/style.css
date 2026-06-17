@@ -1,6 +1,6 @@
 * {
-    margin: 1;
-    padding: 5;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -36,18 +36,14 @@ nav a {
     text-decoration: none;
     color: #f5f5f5;
     font-weight: 500;
-    padding: 0.4rem 0.8 rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 4px;
     transition: background 0.2s, color 0.2s;
 }
 
-nav a:hover {
-    background-color: #f5f5f5;
-    color: #23402a;
-}
 
-nav a:ativo {
-    background-color: #f5f5f5;
+nav ul li a:hover {
+    background-color: white;
     color: #23402a;
 }
 
@@ -57,11 +53,274 @@ main {
     padding: 0 1rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #3fa35b;
+    outline-offset: 3px;
+}
+
+
+/*
+Estilos para a barra de navegação
+*/
+.secstyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 4px solid #23402a;
+    background-color: #e8e8e8;
+    margin: 2rem auto;
+    max-width: 1100px;
+}
+
+.equipa-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.membro {
+    background: #fff;
+    border: 2px solid #23402a;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 250px;
+    text-align: center;
+}
+
+.membro img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.membro figure {
+    margin: 0 0 0.5rem 0;
+}
+
+.membro figcaption {
+    margin-top: 0.5rem;
+    color: #23402a;
+}
+
+
+/* Submenu escondido por padrão */
+nav ul li {
+    position: relative;
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #23402a;
+    /* verde escuro */
+    border: 2px solid #3fa35b;
+    border-radius: 6px;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    z-index: 999;
+}
+
+/* Mostrar submenu ao passar o rato */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+/* Estilo dos links do submenu */
+nav ul li .submenu li a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover do submenu */
+nav ul li .submenu li a:hover {
+    background-color: #3fa35b;
+    padding-left: 1.3rem;
+}
+
+
+
+.intro-galeria {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* GALERIA DE IMAGENS */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.galeria .item {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #23402a;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.galeria img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+/* VÍDEOS */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.video-grid video {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #23402a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/*
+estilos para formulario
+*/
+
+#form1 {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 2px solid #23402a;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    color: #23402a;
+}
+
+#form1 h2,
+#form1 h3 {
+    color: #3fa35b;
+    text-align: center;
+}
+
+#form1 label {
+    font-weight: bold;
+    color: #23402a;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+#form1 input,
+#form1 select,
+#form1 textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #23402a;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #23402a;
+    transition: 0.3s;
+}
+
+#form1 input:focus,
+#form1 select:focus,
+#form1 textarea:focus {
+    outline: none;
+    border-color: #3fa35b;
+    box-shadow: 0 0 8px rgba(63, 163, 91, 0.6);
+    background-color: #3fa35b;
+}
+
+#form1 button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #23402a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+#form1 button:hover {
+    background-color: #3fa35b;
+    transform: scale(1.03);
+}
+
+#form1 .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    color: #23402a;
+}
+
+.linha-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+
+*/
+
+section a {
+    text-decoration: none;
+    color: #000000;
+}
+
+section a:hover {
+
+    color: #23402a;
+}
+
 h1,
 h2,
 h3,
 h4 {
     color: #23402a;
+    text-align: center;
     margin-bottom: 0.5rem;
 }
 
@@ -116,6 +375,10 @@ tfoot td {
     background-color: #f0ede4;
 }
 
+/* 
+Estilos para imagens e vídeos 
+*/
+
 section img {
     max-width: 100%;
     height: auto;
@@ -128,6 +391,66 @@ video {
     border-radius: 4px;
     margin-top: 0.5rem;
 }
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    /* controla o tamanho */
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    /* arredonda as imagens */
+}
+
+
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    animation: fade 10s infinite;
+}
+
+.slider .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 
+Estilos para o rodapé 
+*/
 
 footer {
     text-align: center;
@@ -144,4 +467,49 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li .submenu {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #form1 {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .membro {
+        max-width: 100%;
+    }
 }
